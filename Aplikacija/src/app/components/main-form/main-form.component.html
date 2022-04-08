@@ -1,0 +1,13 @@
+<div class="card card-body mb-3">
+  <form>
+    <div class="mb-3">
+      <input type="text" class="form-control" name="ThumbnailUrlInput" [(ngModel)]="thumbnailUrl" placeholder="Thumbnail..." disabled>
+    </div>
+    <div class="mb-3">
+      <textarea class="form-control" name="descriptionInput" [(ngModel)]="description" placeholder="Description..."
+        rows="7" disabled></textarea>
+    </div>
+    <button (click)="addVideo()" type="button" class="btn btn-success" [disabled]="!this.thumbnailUrl && !this.description">Add
+      video</button>
+  </form>
+</div>

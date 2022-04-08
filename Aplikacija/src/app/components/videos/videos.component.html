@@ -1,0 +1,19 @@
+<ul class="list-group">
+  <li *ngFor="let video of videos" class="list-group-item">
+    <div class="row">
+      <div class="col-sm">
+        <iframe [src]="'https://www.youtube.com/embed/' + video.id | safeIframe"></iframe>
+      </div>
+      <div class="col-sm">
+        <div class="row">
+          <a href=" #">
+            <h4>{{video.thumbnailUrl}}</h4>
+          </a>
+        </div>
+        <div class="row mt-3">
+          <p>{{video.description}}</p>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

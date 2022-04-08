@@ -1,0 +1,11 @@
+<div class="card card-body mb-3">
+  <form>
+    <div class="mb-3">
+      <input type="text" class="form-control" name="url" placeholder="Video URL..." [(ngModel)]="videoUrl">
+    </div>
+    <button (click)="m()" type="button" class="btn btn-secondary" [disabled]="!this.videoUrl">Get Thumbnail Url &
+      description</button>
+  </form>
+</div>
+
+<app-main-form [thumbnailUrl]="thumbnailUrl" [description]="description" [videoUrl]="videoUrl"></app-main-form>
